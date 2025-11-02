@@ -21,7 +21,7 @@ import { Loading } from './Loading';
 export const CharacterInfo = () => {
   const { counter, incrementcCounter, decrementCounter, returnCounter } = useCounter();
   const { data, error } = useFetch(`https://rickandmortyapi.com/api/character/${counter}`);
-
+  //   el trabajo fue desarrollado usando como base la api de (https://rickandmortyapi.com/api/character/), por tanto recomiendo la misma para testear el trabajo, para cualquier api agrege "/${counter] al final, de tal modo que dicha constante funcione como parametro para la url
   if (!data) return <Loading />;
   const character = data;
   return (
